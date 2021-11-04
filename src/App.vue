@@ -3,9 +3,9 @@
   <HelloWorld msg="hugo is the best how about this vue.js"/>
   <hr/>
     <input/>
-    <button type="button" name="button">Show Box</button>
+    <button @click="togglebox">Toggle Box</button>
 
-  <div  class="box"></div>
+  <div v-if="isVisible" class="box"></div>
 </template>
 
 <script>
@@ -16,6 +16,19 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data: function(){
+    return{
+      isVisible: false
+    }
+    
+
+  },
+  methods:{
+    togglebox(){
+      this.isVisible = !this.isVisible
+    }
+
   }
 }
 </script>
