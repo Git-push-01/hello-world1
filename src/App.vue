@@ -1,12 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <HelloWorld msg="hugo is the best how about this vue.js"/>
+  <hr/>
+    <input/>
+    <button type="button" name="button">Show Box</button>
+
+  <div  class="box"></div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
+
   name: 'App',
   components: {
     HelloWorld
@@ -22,5 +28,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.box{
+  background-color: black;
+  height: 200px;
+  width: 1000px;
 }
 </style>
