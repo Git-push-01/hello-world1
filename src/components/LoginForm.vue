@@ -1,22 +1,28 @@
  <template>
   <form @submit.prevent= "handleSubmit">
     <h1>{{title}}</h1>
-    <input type="email" v-model="email">
-    <input type="password" v-model="password">
+    <CustomInput type="email" :label="emailLabel"/>
+    <CustomInput type="password" :label="passwordLabel"/>
     <button>Log In</button>
   </form>
 </template>
 
 <script>
+import CustomInput from "./CustomInput.vue"
 
 export default {
 
   name: 'LoginForm',
+  components: {
+  CustomInput
+},
   data(){
     return{
       title: "Login Form",
       email:"",
-      password:""
+      password:"",
+      emailLabel:"Email",
+      passwordLabel:"Password"
     }
   },
   methods:{
@@ -27,12 +33,7 @@ export default {
 }
 </script>
 <style scoped>
-input{
-  margin: 10px;
-  display: block;
 
-
-}
 
 
 </style>
