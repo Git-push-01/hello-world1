@@ -2,34 +2,25 @@
 
 <template>
 
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-
-    </div>
-
+    <div id="app">
+      <nav>
+          <router-link to='/'>Home</router-link>
 
 
+      </nav>
 
 
-  <div >
+
+
+  
     <LoginForm />
-
-
-
-
-
-
-
-
     </div>
-
-
 
 </template>
 
 <script>
  import LoginForm from './components/LoginForm.vue'
- 
+
 
 
 

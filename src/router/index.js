@@ -3,7 +3,7 @@ import App from '../App.vue'
 import UserPage from '../components/UserPage.vue'
 
 const routes = [
-  {path: '/',component: App},
+  {path: '/', component: App},
   {path: '/UserPage', component: UserPage}
 ]
 
