@@ -10,7 +10,10 @@
      :type="input.type"
      />
 
-    <button  @click="goToUser()">Log In</button>
+
+
+  <button> Log In</button>
+
   </form>
 </template>
 
@@ -19,11 +22,15 @@ import CustomInput from "./CustomInput.vue"
 
 
 
+
+
 export default {
 
   name: 'LoginForm',
   components: {
   CustomInput,
+
+
 
 },
   data(){
@@ -45,16 +52,10 @@ export default {
   },
   methods:{
     handleSubmit(){
+      this.$router.push('/UserPage')
       console.log(this.inputs[0].value, this.inputs[1].value)
 
-    },
-    goToUser(){
-      this.$router.push({ path: '/UserPage' });
     }
-
-
-
-
   }
 }
 </script>

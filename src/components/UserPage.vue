@@ -1,8 +1,13 @@
 <template >
-<h1>welcome user</h1>
+  <div >
+    <h1>welcome user</h1>
+  </div>
+<router-view/>
 </template>
 <script >
 export default{
-name:"userPage"
+name:"userpage"
+
+
 }
 </script>

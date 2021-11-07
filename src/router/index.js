@@ -3,16 +3,8 @@ import App from '../App.vue'
 import UserPage from '../components/UserPage.vue'
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: App
-  },
-  {
-    path: '/UserPage',
-    name: 'userPage',
-    component: UserPage
-  }
+  {path: '/',component: App},
+  {path: '/UserPage', component: UserPage}
 ]
 
 const router = createRouter({
