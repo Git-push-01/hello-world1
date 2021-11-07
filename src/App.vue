@@ -1,4 +1,84 @@
+
+
 <template>
+
+  <div id="nav">
+    <router-link to="/">Log In</router-link> 
+    <!-- <router-link to="/about">About</router-link> -->
+  </div>
+
+  <hr/>
+  <div class="hello">
+    <LoginForm/>
+
+    </div>
+    <button @click="togglebox">Toggle Box</button>
+
+  <div v-if="isVisible" class="box"></div>
+</template>
+
+<script>
+ import LoginForm from './components/LoginForm.vue'
+
+export default {
+  name: 'App',
+  components: {
+    LoginForm
+  },
+  data: function(){
+    return{
+      greeting:"Hello VUE.JS 3.0",
+      isVisible: false
+    }
+  },
+  methods:{
+    togglebox(){
+      this.isVisible = !this.isVisible
+    },
+    greet(){
+      console.log(this.greeting)
+    }
+  }
+}
+</script>
+
+<style>
+	.box {
+  background-color: black;
+  height: 200px;
+  width: 1000px;
+}
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
+
+
+
+<!-- <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -27,4 +107,4 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-</style>
+</style> -->
