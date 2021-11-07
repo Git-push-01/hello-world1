@@ -1,7 +1,7 @@
 <template >
 <label >
   {{label}}
-  <input type="text" >
+  <input :type="type" v-model="inputValue" >
 </label>
 
 </template>
@@ -9,12 +9,24 @@
 <script >
 export default{
   name: "CustomInput",
-  props: [ "label"]
+  props: [ "label","type", "modelValue"],
+  computed:{
+    inputValue:{
+      get(){
+        return this.modelValue
 
+      },
+      set(value){
 
-
-
-
+        this.$emit("update:modelValue", value)
+      },
+    }
+  }
+  // data(){
+  //   return{
+  //     inputValue:""
+  //   }
+  // }
 
 }
 
