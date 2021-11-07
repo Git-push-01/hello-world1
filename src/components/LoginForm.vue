@@ -52,7 +52,7 @@ export default {
   },
   methods:{
     handleSubmit(){
-      
+      this.$router.push({path:'/UserPage'})
       console.log(this.inputs[0].value, this.inputs[1].value)
 
     }

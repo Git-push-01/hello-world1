@@ -7,19 +7,27 @@
           <router-link to='/'>Home</router-link>
 
 
+
       </nav>
 
 
 
+        <LoginForm/>
 
-  
-    <LoginForm />
+
+
+
+
+
+
+
     </div>
 
 </template>
 
 <script>
- import LoginForm from './components/LoginForm.vue'
+import LoginForm from './components/LoginForm.vue'
+
 
 
 
@@ -27,7 +35,8 @@
 export default {
   name: 'App',
   components: {
-    LoginForm,
+     LoginForm,
+
 
 
 
