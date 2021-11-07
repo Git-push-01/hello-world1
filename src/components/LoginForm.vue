@@ -43,7 +43,12 @@ export default {
   methods:{
     handleSubmit(){
       console.log(this.inputs[0].value, this.inputs[1].value);
+    },
+    userPage(){
+      this.$router.push('/home'); 
+
     }
+
   }
 }
 </script>
