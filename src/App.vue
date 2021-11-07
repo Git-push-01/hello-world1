@@ -1,46 +1,10 @@
 <template>
-
-
-  <hr/>
-  <div class="hello">
-    <LoginForm/>
-
-    </div>
-    <button @click="togglebox">Toggle Box</button>
-
-  <div v-if="isVisible" class="box"></div>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </div>
+  <router-view/>
 </template>
-
-<script>
- import LoginForm from './components/LoginForm.vue'
-
-export default {
-
-  name: 'App',
-  components: {
-    LoginForm
-
-  },
-  data: function(){
-    return{
-      greeting:"Hello VUE.JS 3.0",
-      isVisible: false
-    }
-
-
-  },
-  methods:{
-    togglebox(){
-      this.isVisible = !this.isVisible
-    },
-    greet(){
-      console.log(this.greeting)
-    }
-
-  }
-}
-
-</script>
 
 <style>
 #app {
@@ -49,28 +13,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-.box{
-  background-color: black;
-  height: 200px;
-  width: 1000px;
 }
 
-h3 {
-  margin: 40px 0 0;
+#nav {
+  padding: 30px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
+
+#nav a.router-link-exact-active {
   color: #42b983;
 }
-
-
 </style>

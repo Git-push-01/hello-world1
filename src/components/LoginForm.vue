@@ -1,7 +1,7 @@
  <template>
   <form @submit.prevent= "handleSubmit">
     <h1>{{title}}</h1>
-    <!-- <p v-for="str in inputs" :key="str">{{str}}</p> -->
+    
     <CustomInput
     v-for="(input, i) in inputs"
     :key="i"
@@ -45,7 +45,7 @@ export default {
       console.log(this.inputs[0].value, this.inputs[1].value);
     },
     userPage(){
-      this.$router.push('/home'); 
+      this.$router.push('/home');
 
     }
 

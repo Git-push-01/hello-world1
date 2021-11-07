@@ -22,11 +22,6 @@ export default{
       },
     }
   }
-  // data(){
-  //   return{
-  //     inputValue:""
-  //   }
-  // }
 
 }
 
