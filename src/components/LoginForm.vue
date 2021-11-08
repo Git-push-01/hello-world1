@@ -10,8 +10,6 @@
      :type="input.type"
      />
 
-
-
   <button> Log In</button>
 
   </form>
@@ -19,8 +17,6 @@
 
 <script>
 import CustomInput from "./CustomInput.vue"
-
-
 
 
 
@@ -55,7 +51,8 @@ export default {
       this.$router.push({path:'/UserPage'})
       console.log(this.inputs[0].value, this.inputs[1].value)
 
-    }
+    },
+
   }
 }
 </script>
