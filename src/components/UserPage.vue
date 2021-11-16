@@ -1,5 +1,5 @@
   <template >
-    <div >
+     <div >
     <h1>{{greeting}}</h1>
     </div>
 
@@ -10,7 +10,7 @@
 
     name: "user",
     data(){
-      return {greeting:"welcome User"}
+      return {greeting:"welcome user"}
     }
 
 

@@ -1,8 +1,11 @@
 <template>
-  <div >
-    <router-link to="/">Home</router-link> |
-    <router-link to="/LoginForm">Login</router-link> |
-    <router-link to="/UserPage">User</router-link>
+  <div id="app">
+
+      <router-link to="/">Home</router-link> |
+
+      <router-link to="/LoginForm">Login</router-link>
+
+
   </div>
   <router-view />
 </template>
@@ -14,7 +17,6 @@ export default {
 </script>
 
 <style>
-
 h3 {
   margin: 40px 0 0;
 }
